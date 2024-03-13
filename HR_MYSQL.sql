@@ -4,7 +4,7 @@ SET SQL_SAFE_UPDATES=0;
 
 use project;
 
--- 1- Average Attrition Rate for all Departments--
+-- 1- Average Attrition Rate for all Departments --
 
 SELECT
   Department,
@@ -12,14 +12,14 @@ SELECT
     FROM hr1
     GROUP BY Department;
 
--- 2– Average Hourly Rate of Male Research Scientist--
+-- 2– Average Hourly Rate of Male Research Scientist --
  
  SELECT
     AVG(HourlyRate) AS AverageHourlyRate_of_Male_ResearchScientist
 FROM hr1
 WHERE Gender = 'Male' AND JobRole = 'Research Scientist';
 
--- 3– Attrition Rate vs Monthly Income--
+-- 3– Attrition Rate vs Monthly Income --
 
 
 SELECT
@@ -39,7 +39,7 @@ GROUP BY
 ORDER BY
     MonthlyIncomeBin ASC;
 
---4 – Average Working Years for Each Department--
+-- 4 – Average Working Years for Each Department --
 
 
 SELECT
@@ -48,7 +48,7 @@ AVG(TotalWorkingYears) AS AverageWorkingYears
 FROM hr1 JOIN hr2 ON  hr1.employeenumber=hr2.employeeid
 GROUP BY Department;
 
---5– Job Role vs Work Life Balance--
+-- 5– Job Role vs Work Life Balance --
 
 
 SELECT
@@ -63,7 +63,7 @@ FROM
 GROUP BY
     JobRole;
 
---6- Attrition Rate vs Years Since Last Promotion--
+-- 6- Attrition Rate vs Years Since Last Promotion --
 
 
 SELECT
